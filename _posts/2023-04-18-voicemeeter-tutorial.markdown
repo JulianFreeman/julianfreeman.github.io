@@ -70,13 +70,15 @@ Skype 输入设置：
 
 ![sim-skype-in]({{site.baseurl}}/assets/img/voicemeeter-tutorial/sim-skype-in.png)
 
-> 其中 VoiceMeeter Input 用 V1 表示，VoiceMeeter Output 用 B1 表示。详见 [端口介绍](#voicemeeter-端口介绍)。
+> 其中 VoiceMeeter Aux Input 用 V2 表示，VoiceMeeter Output 用 B1 表示。详见 [端口介绍](#voicemeeter-端口介绍)。
 
 然后再把 VoiceMeeter 设置如下：
 
 ![voicemeeter-2]({{site.baseurl}}/assets/img/voicemeeter-tutorial/voicemeeter-2.png)
 
-这是与模拟器节点图所对应的实际设置。除了涉及到的端口，其余的没有设置，比如麦克风输入以及系统声音输出等。所以现在的情况是 Skype 上的朋友可以听到我们电脑的 Youtube 声音，但我们自己听不到。
+> 注：这里在测试时 **Skype 输出不要连接到 V2（VoiceMeeter Aux Input）**上，否则 Skype 通话另一端的朋友听不到我们 Youtube 的声音，原因详见 [各种声音问题][voice-problems]。
+
+上图是与模拟器节点图所对应的实际设置。除了涉及到的端口，其余的没有设置，比如麦克风输入以及系统声音输出等。所以现在的情况是 Skype 上的朋友可以听到我们电脑的 Youtube 声音，但我们自己听不到。
 
 如果我们希望
 
@@ -86,9 +88,9 @@ Skype 输入设置：
 
 那么只需要
 
-- A1 选择扬声器，V1 连接 A1
-- H1 选择麦克风，H1 连接 B1
-- Skype 的输出设备选择 V1（VoiceMeeter Input）
+- A1 选择扬声器，V2 连接 A1（让系统输出连接到扬声器）
+- H1 选择麦克风，H1 连接 B1（让麦克风连接到 Skype 输入）
+- Skype 的输出设备选择 V1（VoiceMeeter Input），V1 连接 A1（让 Skype 输出连接到扬声器）
 
 节点图如下：
 
@@ -97,14 +99,6 @@ Skype 输入设置：
 实际的 VoiceMeeter 设置如下：
 
 ![voicemeeter-3]({{site.baseurl}}/assets/img/voicemeeter-tutorial/voicemeeter-3.png)
-
-## 重音的烦恼
-
-虽然从节点图上看，Skype 的输出通过一定的连接传到了 Skype 的输入里，但实际测试这里并不会出现重音或者回音，可能是软件本身阻断了这种声音传输吧（猜的），所以这样的连接是安全的。我们可以认为这样的连接虽然看上去连着，但实际上是不通的。
-
-不过这种阻断应该只限制在同一个程序内。就是说，如果我开了两个 Skype，我把两个 Skype 的输入输出都设置为上述设置，那么 Skype1 的输出不会自传到 Skype1 的输入（同一程序内被阻断了），但是会传递到 Skype2 的输入中（两个程序之间正常传递），反之亦然。所以这样的话，两个 Skype 端的朋友们其实是可以互相通话，而不会有重音的。
-
-> 暂时这样猜想，以后有机会验证。
 
 ## Cable 虚拟线缆
 
@@ -157,6 +151,7 @@ VoiceMeeter 实际设置如下：
 封面图：Photo by [Thomas Le][cover-img-author] on [Unsplash][cover-img-src]
 
 [voicemeeter-sim]: https://julianfreeman.github.io/VoiceMeeterSim/
+[voice-problems]: https://julianfreeman.github.io/voice-problems/#回环阻断
 
 [cover-img-author]: https://unsplash.com/@thomasble?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [cover-img-src]: https://unsplash.com/photos/bPD4U-mqC44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
