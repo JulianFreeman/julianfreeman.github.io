@@ -3,7 +3,7 @@ layout: post
 title: Google Sheet 公式笔记 - 检索2
 date: 2023-05-10 07:52:00 -0400
 tags: [google sheet, formula]
-description: 本文介绍使用 CHOOSEROWS 和 MATCH 检索 # Add post description (optional)
+description: 本文介绍使用 INDEX 和 MATCH 检索 # Add post description (optional)
 img: google-sheet.jpg  # Add image post (optional)
 ---
 在 [前文][search1] 中我们介绍了使用 `MAP` 加 `FILTER` 代替 `VLOOKUP`，但是在那种情景中，实际上每次进行过滤的时候，只有一行会被过滤出来，但是理论上 `FILTER` 应该会检查所有要被过滤的内容的，有可能要比 `MATCH` 或 `VLOOKUP` 这种只输出匹配的第一个值的函数要慢一点。所以本文记录一下使用 `MATCH` 的替代方法。
@@ -14,7 +14,7 @@ img: google-sheet.jpg  # Add image post (optional)
 
 `MATCH` 返回的是第一个匹配的值在范围内的 **索引**。
 
-一般来说 `MATCH` 与 `INDEX` 配合使用多一些，但是 `INDEX` 只能返回单值，所以这里我们选择 `CHOOSEROWS` 与 `MATCH` 配合使用。
+这里我们先选择 `CHOOSEROWS` 与 `MATCH` 配合使用。
 
 # 一个错误
 
@@ -51,6 +51,22 @@ img: google-sheet.jpg  # Add image post (optional)
 可以看到，`MAP` 的范围是 `F2:F6`，虽然 `F5` 和 `F6` 是空值，但也不影响检索。
 
 该方式相比于使用 `VLOOKUP` 同样拥有不限制检索列的位置，以及自动矫正范围列的移动的特性。只不过相比于使用 `FILTER` 的性能差异，没有去实际测试。
+
+# INDEX
+
+除了 `CHOOSEROWS`，更常与 `MATCH` 配合使用的是 `INDEX`。
+
+`INDEX` 接受三个参数，第一个参数是要索引的范围，第二个参数表示检索第几行，第三个参数表示检索第几列。当第二个参数为 0 时，会返回一整列，当第三个参数为 0 时，会返回一整行，都为 0 时，直接返回整个范围。
+
+所以上例中将 `G2` 的公式改为
+
+`=MAP(F2:F6, LAMBDA(x, IF(x="", "", INDEX({B2:B6,D2:D6}, MATCH(x, A2:A6, 0), 0))))` 
+
+可以达到相同的效果。可能 `INDEX` 加 `MATCH` 组合更常见吧，所以推荐使用 `INDEX` 而非 `CHOOSEROWS`。
+
+# FILTER 和 MATCH
+
+其实两者的区别也挺明显，当结果会有多行的时候，使用 `FILTER`；当结果只能是单行的时候，使用 `MATCH`。
 
 ---
 
