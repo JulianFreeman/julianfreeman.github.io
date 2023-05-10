@@ -150,8 +150,8 @@ VoiceMeeter 实际设置如下：
 
 封面图：Photo by [Thomas Le][cover-img-author] on [Unsplash][cover-img-src]
 
-[voicemeeter-sim]: https://julianfreeman.github.io/VoiceMeeterSim/
-[voice-problems]: https://julianfreeman.github.io/voice-problems/#回环阻断
+[voicemeeter-sim]: {{site.url}}/VoiceMeeterSim/
+[voice-problems]: {{site.url}}/voice-problems/#回环阻断
 
 [cover-img-author]: https://unsplash.com/@thomasble?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [cover-img-src]: https://unsplash.com/photos/bPD4U-mqC44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
