@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Sheet 公式笔记 1
+title: Google Sheet 公式笔记 - 计数
 date: 2023-05-08 18:36:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍 COUNTIF 和 COUNTIFS # Add post description (optional)

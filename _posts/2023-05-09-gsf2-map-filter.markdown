@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Sheet 公式笔记 2
+title: Google Sheet 公式笔记 - 检索1
 date: 2023-05-09 16:47:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍使用 MAP 和 FILTER 代替 VLOOKUP # Add post description (optional)

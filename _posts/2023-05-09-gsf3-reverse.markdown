@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Sheet 公式笔记 3
+title: Google Sheet 公式笔记 - 反转数组
 date: 2023-05-09 22:46:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍如何反转数组 # Add post description (optional)
