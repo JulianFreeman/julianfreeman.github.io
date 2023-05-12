@@ -4,7 +4,7 @@ title: Google Sheet 公式笔记 - 检索1
 date: 2023-05-09 16:47:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍使用 MAP 和 FILTER 代替 VLOOKUP # Add post description (optional)
-img: google-sheet.jpg  # Add image post (optional)
+img: gsf2-map-filter.jpg  # Add image post (optional)
 ---
 本文介绍使用 `MAP` 和 `FILTER` 代替 `VLOOKUP`，不过在此之前，我们需要一些准备工作。
 
@@ -110,11 +110,11 @@ img: google-sheet.jpg  # Add image post (optional)
 
 ---
 
-封面图：Photo by [Rubaitul Azad][cover-img-author] on [Unsplash][cover-img-src]
+封面图：Photo by [Markus Winkler][cover-img-author] on [Unsplash][cover-img-src]
 
 [filter-doc]: https://support.google.com/docs/answer/3093197
 [map-doc]: https://support.google.com/docs/answer/12568985
 
-[cover-img-author]: https://unsplash.com/ja/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[cover-img-src]: https://unsplash.com/photos/TisvwNLLWA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-author]: https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-src]: https://unsplash.com/photos/BvlxNyjnIzg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 

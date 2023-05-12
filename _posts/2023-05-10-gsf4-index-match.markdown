@@ -4,7 +4,7 @@ title: Google Sheet 公式笔记 - 检索2
 date: 2023-05-10 07:52:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍使用 INDEX 和 MATCH 检索 # Add post description (optional)
-img: google-sheet.jpg  # Add image post (optional)
+img: gsf4-index-match.jpg  # Add image post (optional)
 ---
 在 [前文][search1] 中我们介绍了使用 `MAP` 加 `FILTER` 代替 `VLOOKUP`，但是在那种情景中，实际上每次进行过滤的时候，只有一行会被过滤出来，但是理论上 `FILTER` 应该会检查所有要被过滤的内容的，有可能要比 `MATCH` 或 `VLOOKUP` 这种只输出匹配的第一个值的函数要慢一点。所以本文记录一下使用 `MATCH` 的替代方法。
 
@@ -70,10 +70,9 @@ img: google-sheet.jpg  # Add image post (optional)
 
 ---
 
-封面图：Photo by [Rubaitul Azad][cover-img-author] on [Unsplash][cover-img-src]
+封面图：Photo by [Markus Winkler][cover-img-author] on [Unsplash][cover-img-src]
 
 [search1]: {{site.url}}/gsf2-map-filter/
 
-[cover-img-author]: https://unsplash.com/ja/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[cover-img-src]: https://unsplash.com/photos/TisvwNLLWA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-
+[cover-img-author]: https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-src]: https://unsplash.com/photos/afW1hht0NSs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

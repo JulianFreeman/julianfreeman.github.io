@@ -4,7 +4,7 @@ title: Google Sheet 公式笔记 - 计数
 date: 2023-05-08 18:36:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍 COUNTIF 和 COUNTIFS # Add post description (optional)
-img: google-sheet.jpg  # Add image post (optional)
+img: gsf1-countif.jpg  # Add image post (optional)
 ---
 # COUNTIF
 
@@ -128,10 +128,11 @@ img: google-sheet.jpg  # Add image post (optional)
 
 ---
 
-封面图：Photo by [Rubaitul Azad][cover-img-author] on [Unsplash][cover-img-src]
+封面图：Photo by [Nick Hillier][cover-img-author] on [Unsplash][cover-img-src]
 
 [countif-doc]: https://support.google.com/docs/answer/3093480
 
-[cover-img-author]: https://unsplash.com/ja/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[cover-img-src]: https://unsplash.com/photos/TisvwNLLWA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-author]: https://unsplash.com/@nhillier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-src]: https://unsplash.com/photos/yD5rv8_WzxA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+
 

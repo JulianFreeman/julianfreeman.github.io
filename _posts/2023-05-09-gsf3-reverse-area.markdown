@@ -4,7 +4,7 @@ title: Google Sheet 公式笔记 - 反转数组
 date: 2023-05-09 22:46:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍如何反转数组 # Add post description (optional)
-img: google-sheet.jpg  # Add image post (optional)
+img: gsf3-reverse-area.jpg  # Add image post (optional)
 ---
 官方提供的函数中貌似没有一个专门反转数组的函数，所以这里手动实现了一下，记录一下实现的思路。
 
@@ -93,10 +93,9 @@ img: google-sheet.jpg  # Add image post (optional)
 
 ---
 
-封面图：Photo by [Rubaitul Azad][cover-img-author] on [Unsplash][cover-img-src]
+封面图：Photo by [Guillaume TECHER][cover-img-author] on [Unsplash][cover-img-src]
 
 [chooserows-doc]: https://support.google.com/docs/answer/13196659
 
-[cover-img-author]: https://unsplash.com/ja/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[cover-img-src]: https://unsplash.com/photos/TisvwNLLWA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-
+[cover-img-author]: https://unsplash.com/de/@guillaume_t?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-src]: https://unsplash.com/photos/XiBzEObDp5o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

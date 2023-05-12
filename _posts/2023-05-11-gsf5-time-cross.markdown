@@ -4,7 +4,7 @@ title: Google Sheet 公式笔记 - 时间错位
 date: 2023-05-11 13:01:00 -0400
 tags: [google sheet, formula]
 description: 本文介绍一个情景以及解决方案 # Add post description (optional)
-img: google-sheet.jpg  # Add image post (optional)
+img: gsf5-time-cross.jpg  # Add image post (optional)
 ---
 # 情景
 
@@ -139,9 +139,8 @@ img: google-sheet.jpg  # Add image post (optional)
 
 ---
 
-封面图：Photo by [Rubaitul Azad][cover-img-author] on [Unsplash][cover-img-src]
+封面图：Photo by [Icons8 Team][cover-img-author] on [Unsplash][cover-img-src]
 
 
-[cover-img-author]: https://unsplash.com/ja/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[cover-img-src]: https://unsplash.com/photos/TisvwNLLWA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-
+[cover-img-author]: https://unsplash.com/@icons8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+[cover-img-src]: https://unsplash.com/photos/dhZtNlvNE8M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
