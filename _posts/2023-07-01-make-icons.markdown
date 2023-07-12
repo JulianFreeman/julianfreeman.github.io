@@ -6,6 +6,14 @@ tags: [icons]
 description: 本文介绍如何制作一个图标文件 # Add post description (optional)
 img: make-icons.jpg  # Add image post (optional)
 ---
+# 2023-07-11 更新
+
+发现了一个网站，[Icon Archive][iconarchive]，可以直接保存 .ico 和 .icns 图标，也可以保存其他不同大小的图片，十分方便。
+
+---
+
+# 原文
+
 这里说的图标文件，指的是在 Windows 上或者 MacOS 上附加在应用程序上的图标文件。
 
 应用程序的图标文件通常是一个包含多个大小不同的图标文件的集合，比如通常可能会有 16x16、32x32、48x48、128x128、256x256 等大小，为的是使应用在不同视图下都能以最合适的大小显示程序图标。在 [Windows](#windows-版) 上后缀为 .ico，在 [MacOS](#macos-版) 上后缀为 .icns。
@@ -109,6 +117,8 @@ inkscape --export-type=png --export-filename="1024.png" -w 1024 -h 1024 icon.svg
 [image2icon]: https://img2icnsapp.com/
 [im2icns-suggest]: https://img2icnsapp.com/how-to-create-the-best-mac-icons/
 [imagemagick]: https://imagemagick.org/
+
+[iconarchive]: https://www.iconarchive.com/
 
 [cover-img-author]: https://unsplash.com/@aquatium?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [cover-img-src]: https://unsplash.com/photos/_zKxPsGOGKg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
