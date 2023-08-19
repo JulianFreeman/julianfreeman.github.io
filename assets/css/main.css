@@ -1221,7 +1221,7 @@ a.newer-posts:hover {
   position: relative;
   padding: 0;
   margin: 0;
-  max-height: 500px;
+  max-height: 650px;
   background-color: #fafafa;
   overflow: hidden;
 }
