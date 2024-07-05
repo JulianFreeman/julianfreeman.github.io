@@ -1,7 +1,7 @@
 ---
 title: C 语言杂记
 date: 2023-08-19 17:11:00 -0400
-categories: [编程笔记, C]
+categories: [笔记, C]
 tags: [programming, c]
 description: 本文记录了一些自己对 C 语言的理解
 ---

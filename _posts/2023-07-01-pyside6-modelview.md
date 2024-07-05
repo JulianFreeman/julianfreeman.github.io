@@ -1,7 +1,7 @@
 ---
 title: PySide6 笔记 - 模型视图
 date: 2023-07-01 23:28:00 -0400
-categories: [编程笔记, Python]
+categories: [笔记, Python]
 tags: [programming, python, gui, modelview]
 description: 本文简单介绍一点 PySide6 的模型视图
 media_subpath: /assets/img/pyside6-modelview/

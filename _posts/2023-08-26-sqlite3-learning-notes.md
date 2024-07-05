@@ -1,7 +1,7 @@
 ---
-title: SQLite3 杂记
+title: SQLite3 学习笔记
 date: 2023-08-26 17:10:00 -0400
-categories: [编程笔记, SQL]
+categories: [学习笔记, SQL]
 tags: [programming, sqlite3]
 description: 本文记录一些有关 SQLite3 的内容
 ---

@@ -1,7 +1,7 @@
 ---
 title: PySide6 笔记 - 布局
 date: 2023-07-01 23:15:00 -0400
-categories: [编程笔记, Python]
+categories: [笔记, Python]
 tags: [programming, python, gui, layout]
 description: 本文简单介绍一点 PySide6 的界面布局
 ---
