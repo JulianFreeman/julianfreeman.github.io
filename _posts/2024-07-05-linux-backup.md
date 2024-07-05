@@ -128,3 +128,23 @@ deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] https://dl.goog
 2. 打开该文件，将 `GRUB_DEFAULT` 修改为 Windows 启动项的序号（以 `0` 起始，假如 Windows 是第三个启动项，则此处改为 `2`）。
 3. 运行 `update-grub` 。
 4. 重启。
+
+## Linux 挂载 U 盘后里面的中文文件名乱码
+
+```shell
+sudo mount -o iocharset=utf8 /dev/sdb1 /mnt/some
+```
+{: .nolineno}
+
+## 检测 Shell 文件是否以管理员启动
+
+```shell
+#!/bin/bash
+
+if [ "$UID" -ne "0" ]; then
+    echo "Permission Denied. Try to run as root."
+    exit
+fi
+
+# 以上条件也可以换为 "$(id -u)" -ne "0"
+```
