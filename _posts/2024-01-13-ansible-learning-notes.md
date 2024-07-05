@@ -3,7 +3,7 @@ title: Ansible 学习笔记
 date: 2024-01-13 20:08:00 -0500
 categories: [学习笔记, Ansible]
 tags: [linux, ansible]
-description: 本文记录学习 Ansible 的一些笔记
+description: 本文记录学习 Ansible 的一些笔记，参考 骏马金龙
 ---
 
 ## ansible 安装

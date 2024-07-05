@@ -1,7 +1,7 @@
 ---
 title: Linux 学习笔记
 date: 2023-12-08 10:57:00 -0500
-categories: [学习笔记, linux]
+categories: [学习笔记, Linux]
 tags: [linux]
 description: 兄弟连细说 Linux 视频教程的笔记。根据个人情况，会的内容就跳过了，所以章节间不全。
 ---
