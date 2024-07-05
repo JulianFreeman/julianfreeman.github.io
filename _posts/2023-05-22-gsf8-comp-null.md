@@ -1,7 +1,7 @@
 ---
 title: Google 表格公式 - 比较空
 date: 2023-05-22 22:36:00 -0400
-categories: [Goole 表格, 公式笔记]
+categories: [Google 表格, 公式笔记]
 tags: [google, sheet, formula]
 description: 本文介绍比较空值和查找非空值
 ---

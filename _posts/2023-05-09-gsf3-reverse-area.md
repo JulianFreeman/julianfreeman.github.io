@@ -1,7 +1,7 @@
 ---
 title: Google 表格公式 - 反转数组
 date: 2023-05-09 22:46:00 -0400
-categories: [Goole 表格, 公式笔记]
+categories: [Google 表格, 公式笔记]
 tags: [google, sheet, formula]
 description: 本文介绍如何反转数组
 ---

@@ -1,7 +1,7 @@
 ---
 title: Google 表格公式 - 计数
 date: 2023-05-08 18:36:00 -0400
-categories: [Goole 表格, 公式笔记]
+categories: [Google 表格, 公式笔记]
 tags: [google, sheet, formula]
 description: 本文介绍 COUNTIF 和 COUNTIFS
 ---

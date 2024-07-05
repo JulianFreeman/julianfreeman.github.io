@@ -1,7 +1,7 @@
 ---
 title: C++ 语言杂记
 date: 2023-08-19 18:42:00 -0400
-categories: [编程笔记, C++]
+categories: [编程笔记, Cpp]
 tags: [programming, cpp]
 description: 本文记录了一些自己对 C++ 语言的理解
 ---

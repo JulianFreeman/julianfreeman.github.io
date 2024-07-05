@@ -1,7 +1,7 @@
 ---
 title: Google 表格公式 - 去重
 date: 2023-05-22 21:06:00 -0400
-categories: [Goole 表格, 公式笔记]
+categories: [Google 表格, 公式笔记]
 tags: [google, sheet, formula]
 description: 本文介绍数组去重
 ---

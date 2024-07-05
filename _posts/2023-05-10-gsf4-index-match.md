@@ -1,7 +1,7 @@
 ---
 title: Google 表格公式 - 检索2
 date: 2023-05-10 07:52:00 -0400
-categories: [Goole 表格, 公式笔记]
+categories: [Google 表格, 公式笔记]
 tags: [google, sheet, formula]
 description: 本文介绍使用 INDEX 和 MATCH 检索
 ---
