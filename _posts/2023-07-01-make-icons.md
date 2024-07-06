@@ -17,16 +17,16 @@ description: 本文介绍如何制作一个图标文件
 
 应用程序的图标文件通常是一个包含多个大小不同的图标文件的集合，比如通常可能会有 16x16、32x32、48x48、128x128、256x256 等大小，为的是使应用在不同视图下都能以最合适的大小显示程序图标。在 [Windows](#windows-版) 上后缀为 .ico，在 [MacOS](#macos-版) 上后缀为 .icns。
 
-## 准备一个 SVG 文件
+### 准备一个 SVG 文件
 
 在制作一个图标文件之前，当然是先准备一下图标，这里选择 SVG 格式的图标，因为这是一种矢量格式，在生成不同大小的图片文件时不会损失清晰度。下面推荐几个可以找图标的网站：
 
 - [Ionicons][ionicons]
 - [Freeicons][freeicons]
 
-## Windows 版
+### Windows 版
 
-### 准备工作
+#### 准备工作
 
 安装 [Inkscape][inkscape]，安装 [ImageMagick][imagemagick]。
 
@@ -34,7 +34,7 @@ Inkscape 并不会把自己的 `bin`{: .filepath} 目录自动添加到环境变
 
 安装 ImageMagick 时记得勾选“安装常规辅助工具，例如 convert”。
 
-### Batch 脚本
+#### Batch 脚本
 
 ```batch
 @echo off
@@ -79,9 +79,9 @@ svg2png.bat icon.svg
 
 与 .svg 文件同级的目录下会出现一个同名的 .ico 文件。
 
-## MacOS 版
+### MacOS 版
 
-### 准备工作
+#### 准备工作
 
 安装 [Inkscape][inkscape]，安装 [Image2Icon][image2icon]。
 
@@ -94,7 +94,7 @@ ln -s /Applications/Inkscape.app/Contents/MacOS/inkscape /usr/local/bin/inkscape
 
 这样就可以直接在终端调用 `inkscape` 命令了。
 
-### SVG to PNG
+#### SVG to PNG
 
 [Image2Icon][im2icns-suggest] 建议使用 1024x1024 大小的图片创建 .icns 图标，因此我们先用 Inkscape 把 .svg 文件转成 1024x1024 大小的 .png 文件。在终端运行如下命令：
 
@@ -104,7 +104,7 @@ inkscape --export-type=png --export-filename="1024.png" -w 1024 -h 1024 icon.svg
 
 其中 `icon.svg`{: .filepath} 就是我们提前准备的 SVG 图标文件了。此命令在该文件的同级目录下生成一个 `1024.png`{: .filepath} 文件。
 
-### PNG to ICNS
+#### PNG to ICNS
 
 打开 Image2Icon 软件，将刚才创建的 `1024.png`{: .filepath} 文件拖放进软件界面，点击“导出”，选择 ICNS 格式，“保存图标”就可以了。
 
