@@ -150,5 +150,5 @@ VoiceMeeter 实际设置如下：
 
 主要还是希望 [VoiceMeeterSim][voicemeeter-sim] 这个模拟器能帮一些忙吧。
 
-[voicemeeter-sim]: {{site.url}}/VoiceMeeterSim/
+[voicemeeter-sim]: https://vmsim.oranj.work/
 [voice-problems]: {{site.url}}/posts/voice-problems/#回环阻断
