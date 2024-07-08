@@ -102,3 +102,62 @@ fn advance() {
 ```
 
 上述表示以读写模式打开文件，如果不存在就创建。详见 [文档](https://doc.rust-lang.org/std/fs/struct.OpenOptions.html)。
+
+## 创建目录
+
+```rust
+use std::fs;
+
+//创建一个目录
+fn create_dir() {
+    fs::create_dir("./rsc/demod").unwrap();
+}
+
+//递归创建目录
+fn create_multiple_dir() {
+    fs::create_dir_all("./rsc/a/b/c").unwrap();
+}
+```
+
+## 读取目录内容
+
+```rust
+use std::fs;
+use std::fs::ReadDir;
+
+fn list_files() {
+    let paths: ReadDir = fs::read_dir("./rsc").unwrap();
+    for path in paths {
+        println!("> {:?}", path.unwrap().path())
+    }
+}
+```
+
+```console
+> "./rsc\\a"
+> "./rsc\\demo.txt"
+> "./rsc\\demod"
+> "./rsc\\sheet.png"
+> "./rsc\\test.txt"
+```
+
+## 删除文件和目录
+
+```rust
+use std::fs;
+
+//删除一个文件
+fn remove_file() {
+    fs::remove_file("./rsc/test.txt").unwrap();
+}
+
+//删除一个空目录
+fn remove_empty_dir() {
+    fs::remove_dir("./rsc/demod").unwrap();
+}
+
+//把目录里的内容全部删除，然后把目录本身也删除
+fn remove_nonempty_dir() {
+    fs::remove_dir_all("./rsc/a").unwrap();
+}
+```
