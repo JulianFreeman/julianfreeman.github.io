@@ -700,3 +700,127 @@ const f2 = function (): void {
 };
 ```
 
+## 对象类型
+
+[前面](#对象) 讲了关于定义对象类型的方法，[别名](#类型别名) 和 [接口](#接口) 是更方便的方法。同时也说明了，如果参数是解构的，该 [如何](#参数解构) 声明类型。
+
+### 属性修饰符
+
+可选的属性，就是在属性后加 `?`，这个 [之前](#对象) 说过了。如果开启了 `strictNullChecks` 的话，使用可选的属性需要先判断是否为 `undefined`。
+
+只读的属性，顾名思义，无法二次赋值。但是这个不影响运行时，只在类型检查时检查是否被二次赋值了：
+
+```ts
+interface SomeType {
+    readonly prop: string;
+}
+
+function doSomething(obj: SomeType) {
+    console.log(`prop has value ${obj.prop}`);
+    obj.prop = "hello";  // error
+}
+```
+
+同时注意，一个属性标记为 `readonly` 只限制了属性的值本身不能更改，但是如果属性的值是另一个对象，则该对象内的属性的值还是可以改的。
+
+另外标记了 `readonly` 也不表示这个属性就一定不可能再变了，这个限制只加在了该对象的该属性上而已。比如通过下例我们就修改了只读的属性，甚至也可以 [移除该限制](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers)。
+
+```ts
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface ReadonlyPerson {
+    readonly name: string;
+    readonly age: number;
+}
+
+let writablePerson: Person = {
+    name: "Person McPersonface",
+    age: 42,
+};
+
+let readonlyPerson: ReadonlyPerson = writablePerson;
+
+console.log(readonlyPerson.age);
+writablePerson.age++;
+console.log(readonlyPerson.age);
+```
+
+有些对象的属性没办法提前知道，但是我们知道它们的类型，就可以使用索引签名：
+
+```ts
+interface StringArray {
+    [index: number]: string;
+}
+```
+
+这个接口的意思是，对象的属性是数字类型，属性的值是字符串类型。
+
+能作为索引签名的类型不多，只有 `string`、 `number`、 `symbol` 和模板字符串模式（？），以及由它们构成的联合类型。
+
+某种程度上也可以指定多种类型的索引，但是得注意，当同时使用 `string` 和 `number` 类型的索引时，数字索引返回的类型必须是字符串索引返回的类型的子类。
+
+```ts
+interface Animal {
+    name: string;
+}
+
+interface Dog extends Animal {
+    breed: string;
+}
+
+interface Okay {
+    [x: string]: Animal;
+    [x: number]: Dog;
+}
+
+interface NotOkay {
+    [x: number]: Animal;  // error
+    [x: string]: Dog;
+}
+```
+
+这是因为在 JavaScript 中，当使用数字索引的时候，这个数字会先被转换为字符串类型，再去索引对象。
+
+索引签名不仅限制了索引的类型，也限制了值的类型。
+
+```ts
+interface NumberDict {
+    [index: string]: number;
+    
+    length: number;
+    name: string;  // error
+}
+```
+
+但是如果索引返回的是联合类型，就可以指定多种类型了：
+
+```ts
+interface NumberDict {
+    [index: string]: number | string;
+
+    length: number;
+    name: string;  // error
+}
+```
+
+我们也可以给索引加只读限制：
+
+```ts
+interface NumberDict {
+    readonly [index: number]: string;
+}
+
+const nums: NumberDict = {
+    1: "a",
+    2: "b",
+};
+
+nums[1] = "c";  // error
+```
+
+
+
+
