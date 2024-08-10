@@ -3,7 +3,7 @@ title: React 基础
 date: 2023-11-21 15:51:00 -0500
 categories: [翻译, React]
 tags: [react, web]
-description: Next.js 官方教程翻译，2023-11-21 版本的，后续若网站内容更新可能会有所不同
+description: Next.js 官方教程翻译，后续若网站内容更新可能会有所不同
 media_subpath: /assets/img/react-foundations/
 ---
 
@@ -21,6 +21,14 @@ media_subpath: /assets/img/react-foundations/
 ### 预备知识
 
 本教程需要一些 HTML，CSS，JavaScript 基础，但不需要了解 React。如果你已经了解 React 了，你可以直接跳到[从 React 到 Next.js](#第八章-从-react-到-nextjs) 或者[仪表盘应用]({{site.url}}/posts/learn-nextjs)课程。
+
+### 系统要求
+
+在开始教程之前，请确保你安装了如下软件/系统：
+
+- Node.js 20.12.0 或者更高
+- 操作系统：macOS、Windows(包括 WSL)，或者 Linux
+- VSCode 或者其他文本编辑器
 
 ## 第一章 React 和 Next.js
 
@@ -46,15 +54,16 @@ Next.js 是一个灵活的 **React 框架**，提供了许多构建模块来创�
 
 ### React 是什么？
 
-[React](https://react.dev/learn) 是一个用于构建交互式 **用户界面** 的 JavaScript **库**。
+[React](https://react.dev/) 是一个用于构建交互式 **用户界面** 的 JavaScript **库**。
 
 这里的用户界面，指的是用户在屏幕上看到的并且可以交互的各种元素。
 
-![user-interface](user-interface.avif)
+![learn-react-components](light/learn-react-components.avif){: .light}
+![learn-react-components](dark/learn-react-components.avif){: .dark}
 
 这里的库，指的是 React 提供了很多很有用的功能来构建 UI，但是由开发者自己决定在哪里使用这些功能。
 
-React 能够成功的一部分原因也在于它相对不那么关心构建应用的其他方面。这也造就了一个拥有丰富的第三方工具和解决方案的生态系统。
+React 能够成功的一部分原因也在于它相对不那么关心构建应用的其他方面。这也造就了一个拥有丰富的第三方工具和解决方案（比如 Next.js）的生态系统。
 
 这也意味着，要从头开始构建一个完整的 React 应用，是需要花些工夫的。开发者需要花时间配置各种工具以及为某些常见的应用需求重复造轮子。
 
@@ -64,7 +73,8 @@ Next.js 是一个 React **框架**，提供了创建网页应用的构建模块�
 
 这里的框架，指的是 Next.js 负责处理 React 需要的工具配置，也提供了一些额外的工具，功能和优化。
 
-![next-app](next-app.avif)
+![learn-ecosystem](light/learn-ecosystem.avif){: .light}
+![learn-ecosystem](dark/learn-ecosystem.avif){: .dark}
 
 你可以使用 React 来构建你的 UI，然后逐渐用 Next.js 的功能来解决常见的应用需求，比如路由、数据抓取、整合等，一步步提升开发体验和用户体验。
 
@@ -74,11 +84,12 @@ Next.js 是一个 React **框架**，提供了创建网页应用的构建模块�
 
 ## 第二章 渲染用户界面
 
-要理解 React 是如何工作的，我们需要理解浏览器是如何解析我们的代码并创建一个交互式用户界面的。
+要理解 React 是如何工作的，我们首先需要理解浏览器是如何解析我们的代码并创建（或者说渲染）一个用户界面（UI）的。
 
 当用户访问一个网页时，服务器会返回一个 HTML 文件给浏览器，这个文件可能像如下的样子：
 
-![html-to-dom](html-to-dom.avif)
+![learn-html-and-dom](light/learn-html-and-dom.avif){: .light}
+![learn-html-and-dom](dark/learn-html-and-dom.avif){: .dark}
 
 然后浏览器读取这个 HTML 文件并构建了一个文件对象模型（DOM）。
 
@@ -86,11 +97,17 @@ Next.js 是一个 React **框架**，提供了创建网页应用的构建模块�
 
 DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是代码和用户界面之间的桥梁，有树状结构并包含一些父子关系。
 
-![dom-to-ui](dom-to-ui.avif)
+![learn-dom-and-ui](light/learn-dom-and-ui.avif){: .light}
+![learn-dom-and-ui](dark/learn-dom-and-ui.avif){: .dark}
 
-你可以使用 DOM 方法和一门编程语言，比如 JavaScript，来监听用户事件，[修改 DOM 结构](https://developer.mozilla.org/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)（选择、添加、更新、删除用户界面上的特定元素）。修改 DOM 不仅是针对特定的元素，也可以修改元素的样式和内容。
+你可以使用 DOM 方法和 JavaScript，来监听用户事件，[修改 DOM 结构](https://developer.mozilla.org/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)（选择、添加、更新、删除用户界面上的特定元素）。修改 DOM 不仅是针对特定的元素，也可以修改元素的样式和内容。
 
 我们在下一节学习如何使用 JavaScript 和 DOM 方法。
+
+> **延伸阅读**：
+> - [DOM 介绍](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction)
+> - [如何在谷歌浏览器中查看 DOM](https://developer.chrome.com/docs/devtools/dom/)
+> - [如何在火狐浏览器中查看 DOM](https://developer.mozilla.org/docs/Tools/Debugger/How_to/Highlight_and_inspect_DOM_nodes)
 
 ## 第三章 用 JavaScript 更新 UI
 
@@ -105,6 +122,7 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
   </body>
 </html>
 ```
+{: file="index.html"}
 
 然后给 `div` 一个唯一的 `id` 以便后续我们可以选中它。
 
@@ -115,6 +133,7 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
   </body>
 </html>
 ```
+{: file="index.html"}
 
 要想在 HTML 中编写 JavaScript 代码，添加一个 `script` 标签。
 
@@ -126,8 +145,9 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
   </body>
 </html>
 ```
+{: file="index.html"}
 
-现在，在 `script` 标签内，你可以使用 DOM 方法 `getElementById()`，然后通过 `id` 选中 `<div>` 元素。
+现在，在 `script` 标签内，你可以使用 DOM 方法 [`getElementById()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)，然后通过 `id` 选中 `<div>` 元素。
 
 ```html
 <html>
@@ -140,6 +160,7 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
   </body>
 </html>
 ```
+{: file="index.html"}
 
 然后你可以继续使用 DOM 方法创建一个新的 `h1` 元素。
 
@@ -156,7 +177,7 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
       const header = document.createElement('h1');
  
       // Create a new text node for the H1 element
-      const text = 'Develop. Preview. Ship. 🚀';
+      const text = 'Develop. Preview. Ship.';
       const headerContent = document.createTextNode(text);
  
       // Append the text to the H1 element
@@ -168,14 +189,16 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
   </body>
 </html>
 ```
+{: file="index.html"}
 
-为了确保一切正常，在浏览器里打开这个 HTML 文件，你应该会看到一个 h1 标签，写着“Develop. Preview. Ship. 🚀”。
+为了确保一切正常，在浏览器里打开这个 HTML 文件，你应该会看到一个 h1 标签，写着“Develop. Preview. Ship.”。
 
 ### HTML 和 DOM
 
 如果你在[浏览器开发工具](https://developer.chrome.com/docs/devtools/overview/)中查看 DOM 元素，你会发现 DOM 中包含一个 `<h1>` 元素。页面的 DOM 结构和我们的源码不一致。
 
-![source-code](source-code.avif)
+![learn-dom-and-source](light/learn-dom-and-source.avif){: .light}
+![learn-dom-and-source](dark/learn-dom-and-source.avif){: .dark}
 
 这是因为 HTML 呈现的是 **原始的页面内容**，而 DOM 呈现的是 **更新后的页面内容**，我们刚刚用 JavaScript 更新的。
 
@@ -185,12 +208,13 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
 <script type="text/javascript">
   const app = document.getElementById('app');
   const header = document.createElement('h1');
-  const text = 'Develop. Preview. Ship. 🚀';
+  const text = 'Develop. Preview. Ship.';
   const headerContent = document.createTextNode(text);
   header.appendChild(headerContent);
   app.appendChild(header);
 </script>
 ```
+{: file="index.html"}
 
 当应用或者团队越来越大的时候，用这种方式构建应用会变得越来越棘手。
 
@@ -209,6 +233,10 @@ DOM 是一种对 HTML 元素的呈现，这种呈现是基于对象的。它是�
 作为一个开发者，你可以告诉 React 你想要什么样的用户界面，然后 React 会自己想办法更新 DOM。
 
 下一节，我们会开始讨论如何使用 React。
+
+> **延伸阅读**：
+> - [HTML 和 DOM](https://developer.chrome.com/docs/devtools/dom/#appendix)
+> - [声明式 UI 和命令式 UI 的对比](https://react.dev/learn/reacting-to-input-with-state#how-declarative-ui-compares-to-imperative)
 
 ## 第四章 开始使用 React
 
